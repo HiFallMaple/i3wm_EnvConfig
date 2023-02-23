@@ -1,2 +1,2 @@
-# I3WM_EnvConfig
-My I3WM desktop environment configuration file.
+# i3wm_EnvConfig
+My i3wm desktop environment configuration file.
