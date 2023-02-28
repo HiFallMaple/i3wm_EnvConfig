@@ -14,3 +14,6 @@ cp -r ~/.config/fcitx5/conf fcitx5/
 cp ~/.config/fcitx5/config fcitx5/
 # fcitx5 theme Nord-Dark
 cp -r ~/.local/share/fcitx5/themes/Nord-Dark/ fcitx5/theme
+
+# dunst
+cp ~/.config/dunst/dunstrc dunst
