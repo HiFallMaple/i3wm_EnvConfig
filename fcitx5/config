@@ -45,19 +45,19 @@ TogglePreedit=
 
 [Behavior]
 # Active By Default
-ActiveByDefault=False
+ActiveByDefault=True
 # Share Input State
 ShareInputState=No
 # Show preedit in application
 PreeditEnabledByDefault=True
 # Show Input Method Information when switch input method
-ShowInputMethodInformation=True
+ShowInputMethodInformation=False
 # Show Input Method Information when changing focus
 showInputMethodInformationWhenFocusIn=False
 # Show compact input method information
-CompactInputMethodInformation=True
+CompactInputMethodInformation=False
 # Show first input method information
-ShowFirstInputMethodInformation=True
+ShowFirstInputMethodInformation=False
 # Default page size
 DefaultPageSize=10
 # Override Xkb Option
@@ -66,8 +66,11 @@ OverrideXkbOption=False
 CustomXkbOption=
 # Force Enabled Addons
 EnabledAddons=
-# Force Disabled Addons
-DisabledAddons=
 # Preload input method to be used by default
 PreloadInputMethod=True
+
+[Behavior/DisabledAddons]
+0=kimpanel
+1=notificationitem
+2=notifications
 

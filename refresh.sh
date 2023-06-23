@@ -17,3 +17,6 @@ cp -r ~/.local/share/fcitx5/themes/Nord-Dark/ fcitx5/theme
 
 # dunst
 cp ~/.config/dunst/dunstrc dunst
+
+# kill LINE shadow
+cp ~/kill_LINE_shadow/main.py kill_LINE_shadow

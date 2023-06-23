@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 focus_on_window_activation focus
 
 ########################
@@ -17,7 +17,7 @@ focus_on_window_activation focus
 ########################
 
 # polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id $HOME/.config/polybar/launch.sh
 
 # picom
 # exec_always --no-startup-id picom -b --experimental-backends --config $HOME/.config/picom.conf
@@ -28,7 +28,10 @@ exec_always --no-startup-id picom -b --config $HOME/.config/picom.conf
 exec --no-startup-id hsetroot -solid "#232831"
 
 # i3-layouts
-exec_always --no-startup-id i3-layouts
+# exec_always --no-startup-id i3-layouts
+
+# kill-line-shadow
+# exec --no-startup-id python3 /home/tony/kill_LINE_shadow/kill_LINE_shadow.py
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -47,11 +50,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
 
 
 
@@ -88,6 +88,9 @@ bindsym $mod+d exec "rofi -show drun -show -modi drun,run"
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
+# screenshot
+bindsym $mod+Shift+s exec flameshot gui
+
 # control focused window when follows the mouse movements
 focus_follows_mouse no
 
@@ -104,16 +107,16 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j exec i3l move left
-bindsym $mod+Shift+k exec i3l move down
-bindsym $mod+Shift+l exec i3l move up
-bindsym $mod+Shift+semicolon exec i3l move right
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left exec i3l move left
-bindsym $mod+Shift+Down exec i3l move down
-bindsym $mod+Shift+Up exec i3l move up
-bindsym $mod+Shift+Right exec i3l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -209,16 +212,16 @@ set $ws10 "10"
 workspace_auto_back_and_forth yes
 
 # i3-layouts
-set $i3l vstack 0.6 to workspace $ws1
-set $i3l vstack 0.6 to workspace $ws2
-set $i3l vstack 0.6 to workspace $ws3
-set $i3l vstack 0.6 to workspace $ws4
-set $i3l vstack 0.6 to workspace $ws5
-set $i3l vstack 0.6 to workspace $ws6
-set $i3l vstack 0.6 to workspace $ws7
-set $i3l vstack 0.6 to workspace $ws8
-set $i3l vstack 0.6 to workspace $ws9
-set $i3l vstack 0.6 to workspace $ws10
+# set $i3l vstack 0.6 to workspace $ws1
+# set $i3l vstack 0.6 to workspace $ws2
+# set $i3l vstack 0.6 to workspace $ws3
+# set $i3l vstack 0.6 to workspace $ws4
+# set $i3l vstack 0.6 to workspace $ws5
+# set $i3l vstack 0.6 to workspace $ws6
+# set $i3l vstack 0.6 to workspace $ws7
+# set $i3l vstack 0.6 to workspace $ws8
+# set $i3l vstack 0.6 to workspace $ws9
+# set $i3l vstack 0.6 to workspace $ws10
 
 
 # switch to workspace
@@ -265,8 +268,8 @@ gaps outer 2px
 # smart_gaps inverse_outer
 
 # border
-default_border pixel 1
-default_floating_border pixel 1
+default_border pixel 2
+default_floating_border pixel 2
 
 # title
 title_align center
